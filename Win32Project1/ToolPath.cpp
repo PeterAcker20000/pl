@@ -478,6 +478,8 @@ void DrawScene(HWND hwnd, HDC hdc)
 	double h = (g_ymax - g_ymin)*1.1;
 	int rw = rect.right - rect.left;
 	int rh = rect.bottom - rect.top;
+	if (w == 0) w = 1;
+	if (h == 0) h = 1;
 	double xScale = rw / w;
 	double yScale = rh / h;
 
